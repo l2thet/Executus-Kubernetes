@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: executus-server
+  namespace: default
+spec:
+  selector:
+    app: executus-server
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

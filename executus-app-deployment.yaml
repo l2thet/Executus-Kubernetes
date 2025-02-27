@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: executus-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: executus-app
+  template:
+    metadata:
+      labels:
+        app: executus-app
+    spec:
+      containers:
+      - name: executus-app
+        image: docker.io/captum/executus-app:latest
+        ports:
+        - containerPort: 8081
+        envFrom:
+        - configMapRef:
+            name: executus-app-configmap
