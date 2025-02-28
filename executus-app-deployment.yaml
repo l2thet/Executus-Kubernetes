@@ -15,6 +15,7 @@ spec:
       containers:
       - name: executus-app
         image: docker.io/captum/executus-app:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8081
         envFrom:
