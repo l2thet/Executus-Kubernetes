@@ -7,4 +7,7 @@ on the local machine to include
 127.0.0.1   executus-app.local
 127.0.0.1   executus-server.local
 
+Then in a console start the tunnel
+minikube tunnel
+
 Then with a browser you can navigate to executus-app.local:8081.
